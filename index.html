@@ -86,7 +86,10 @@
           "href",
           `https://www.facebook.com/sharer.php?u=${postUrl}`
         );
-        $("meta[property='og\\title']").attr("content", "Facebook title");
+        $("meta[property='og:title']").remove();
+        $("head").append(
+          "<meta property='og:title' content='Facebook title' />"
+        );
       });
     </script>
   </body>
